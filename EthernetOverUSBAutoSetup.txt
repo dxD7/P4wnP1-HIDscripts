@@ -1,7 +1,7 @@
 //P4wnP1 HiDscript 
 //Setup shared internet with host computer 
 //Change USB gadget IP address & gateway to allow P4wnP1 to connect to internet - https://www.youtube.com/watch?v=QEWaIoal5qU
-//Manually need to enter:"sudo route add -net default gw 172.16.0.2" inside P4wnP1 SSH to reach internet - can also be pasted at the end //of /etc/bash.bashrc so it connects to internet after every boot
+//Manually need to enter:"sudo route add -net default gw 172.16.0.2" inside P4wnP1 SSH to reach internet - can also be pasted at the end of /etc/bash.bashrc so it connects to internet after every boot
   
 layout('us');			// US keyboard layout
 typingSpeed(0,0)	// Type Fast
