@@ -12,7 +12,7 @@ press('GUI D');
 delay(500);
 press('GUI');
 delay(300);
-type("Network Connections");
+type("ncpa.cpl");
 delay(100);
 press('ENTER');
 delay(2000);
