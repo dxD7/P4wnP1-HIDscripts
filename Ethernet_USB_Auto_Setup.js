@@ -13,7 +13,7 @@ delay(500);
 press('GUI');
 delay(300);
 type("ncpa.cpl");
-delay(100);
+delay(500);
 press('ENTER');
 delay(2000);
 press('SPACE');
